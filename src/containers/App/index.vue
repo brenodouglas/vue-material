@@ -16,8 +16,8 @@
       </md-list>
     </md-sidenav>
 
-    <div class="page-content">
-      <div class="md-whiteframe main-header md-whiteframe-1dp">
+    <div :class="$style.pageContent">
+      <div class="md-whiteframe main-header md-whiteframe-1dp" :class="$style.mainHeader">
         <md-toolbar class="md-large">
           <div class="md-toolbar-container">
             <md-button class="md-icon-button icon-button-toggle" @click="toggleLeftSidenav">
@@ -39,20 +39,28 @@
           </div>
 
           <div class="md-toolbar-container">
-            <md-button class="md-fab md-mini md-plus-button">
+            <md-button class="md-fab md-mini" :class="$style.mdPlusButton">
               <md-icon>add</md-icon>
             </md-button>
           </div>
         </md-toolbar>
       </div>
     </div>
+
+    <video-list />
+
   </div>
 
 </template>
 
 <script>
+import VideoList from 'components/VideoList';
+
 export default {
   name: 'app',
+  components: {
+    VideoList,
+  },
   methods: {
     toggleLeftSidenav() {
       this.$refs.leftSidenav.toggle();
@@ -61,14 +69,15 @@ export default {
 };
 </script>
 
-<style scoped>
-  .md-plus-button {
+<style module>
+  .mdPlusButton {
     margin: 0;
     bottom: -20px;
-    position: absolute;
-    right: 0px;
+    position: absolute !important;
+    right: 0px !important;
   }
-  .page-content {
+
+  .pageContent {
     -ms-flex: 1;
     flex: 1;
     display: -ms-flexbox;
@@ -77,7 +86,7 @@ export default {
     flex-flow: column;
   }
 
-  .main-header {
+  .mainHeader {
       position: relative;
       z-index: 2;
   }
