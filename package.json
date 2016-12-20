@@ -1,0 +1,13 @@
+{
+  "name": "nuxt-vuex-store",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "nuxt": "latest",
+    "vue-material": "^0.5.1"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start"
+  }
+}
