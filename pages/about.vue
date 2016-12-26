@@ -1,15 +1,18 @@
+
 <template>
   <div>
-    <p>
-      <button @click="$store.commit('increment')">{{ $store.state.counter }}</button><br>
-      <nuxt-link to="/">Home</nuxt-link>
-    </p>
+    <p>Hi from {{ name }}</p>
+    <nuxt-link to="/">Home page</nuxt-link>
   </div>
 </template>
 
-<style>
-button {
-  color: yellow;
-  border-radius: 0px;
+<script>
+export default {
+  layout: 'dark',
+  data ({ req }) {
+    return {
+      name: req ? 'server' : 'client2'
+    }
+  }
 }
-</style>
+</script>

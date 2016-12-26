@@ -1,7 +1,8 @@
 <template>
   <div>
-    <header-top />
-
+    <p>
+      <nuxt-link to="/about">About</nuxt-link>
+    </p>
   </div>
 </template>
 

@@ -2,12 +2,9 @@ const { join } = require('path')
 
 module.exports = {
   build: {
-    vendor: ['axios', 'vue-material']
+    vendor: ['axios']
   },
   css: [
-    join(__dirname, 'css/styles.css')
-  ],
-  plugins: [
-    '~plugins/vue-material.js'
+   'element-ui/lib/theme-default/index.css'
   ]
 }
