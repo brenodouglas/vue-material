@@ -1,9 +1,9 @@
 <template>
   <ul class="nav navbar-nav navbar-right">
     <li>
-      <a href="http://104.236.248.144/cart" class="navbar-nav__link-icon ">
+      <nuxt-link to="/cart" class="navbar-nav__link-icon ">
         <span class="custom-icon icon-car"></span>
-      </a>
+      </nuxt-link>
     </li>
     <li>
       <a href="#" class="navbar-nav__link-icon">
