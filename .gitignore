@@ -18,3 +18,5 @@ examples/**/dist
 coverage
 *.lcov
 .nyc_output
+
+*DS_Stor*

@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <nuxt-link to="/about">About</nuxt-link>
+
     </p>
   </div>
 </template>
@@ -13,6 +13,13 @@ import HeaderTop from '~components/header'
 export default {
   // fetch(context) is called by the server-side
   // and nuxt before instantiating the component
+  layout: 'default',
+  head: {
+    title: 'Home page 🚀',
+    meta: [
+      { hid: 'description', name: 'description', content: 'About page description' }
+    ]
+  },
   fetch ({ store }) {
     store.commit('increment')
   },
